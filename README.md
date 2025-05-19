@@ -1,2 +1,4 @@
 # Javascript
-Javascript、Web相关项目
+Javascript相关项目：
+
+1、Snake：贪吃蛇项目实现

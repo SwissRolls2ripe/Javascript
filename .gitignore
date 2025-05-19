@@ -1,0 +1,44 @@
+# Some Project
+
+# Build results
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+
+# Rider files
+venv
+.idea/
+*.pyc
+__pycache__
+
+# Auto-generated files
+*.g.cs
+*.g.i.cs
+*.designer.cs
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+
+# Logs
+*.log
+
+# Others
+*.DS_Store
+
+### VisualStudioCode ###
+.vscode/*
+.vscode/**
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
