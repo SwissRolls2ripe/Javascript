@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图书列表</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>图书列表</h1>
+    <div id="loading">加载中...</div>
+    <div id="error" style="display: none; color: red;"></div>
+    <table id="books-table" style="display: none;">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>图书编号</th>
+          <th>书名</th>
+          <th>价格</th>
+          <th>创建时间</th>
+        </tr>
+      </thead>
+      <tbody id="books-list">
+        <!-- 图书数据将通过JavaScript动态插入 -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

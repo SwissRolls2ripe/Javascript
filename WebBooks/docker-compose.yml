@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  # Node.js 后端服务
+  node-app:
+    build: ./backend
+    container_name: webbooks-node
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    environment:
+      - DB_HOST=mysql-demo
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASSWORD=123456
+      - DB_NAME=Hisense
+    restart: unless-stopped
+
+  # Nginx 前端服务
+  nginx:
+    image: nginx
+    container_name: webbooks-nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - node-app
+    networks:
+      - app-network
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+      - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
